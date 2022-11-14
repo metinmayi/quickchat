@@ -6,5 +6,5 @@ export const StyledNavbar = styled(Navbar)`
   border-bottom: 2px solid black;
   border-radius: 10px;
   transition: top 0.5s;
-  top: ${(props) => (props.isCollapsed ? "-14%" : "0")};
+  top: ${(props) => (props.$isCollapsed ? "-14%" : "0")};
 `;
