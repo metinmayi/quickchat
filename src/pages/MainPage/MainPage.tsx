@@ -1,10 +1,10 @@
+import { Container } from "react-bootstrap";
 import { Header } from "./Header/Header";
-import { StyledContainer } from "./StyledContainer";
 
 export const MainPage: React.FC = () => {
   return (
-    <StyledContainer>
+    <Container>
       <Header />
-    </StyledContainer>
+    </Container>
   );
 };
