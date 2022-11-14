@@ -3,7 +3,7 @@ import { List } from "react-bootstrap-icons";
 import { Logo } from "./Logo/Logo";
 import { StyledNavbar } from "./StyledNavbar";
 
-export const Header: React.FC = () => {
+export const NavbarComponent: React.FC = () => {
   return (
     <StyledNavbar fixed="top" className="d-block">
       <Row>

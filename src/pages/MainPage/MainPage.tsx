@@ -1,10 +1,10 @@
 import { Container } from "react-bootstrap";
-import { Header } from "./Header/Header";
+import { NavbarComponent } from "./NavbarComponent/NavbarComponent";
 
 export const MainPage: React.FC = () => {
   return (
     <Container>
-      <Header />
+      <NavbarComponent />
     </Container>
   );
 };
