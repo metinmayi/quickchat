@@ -9,4 +9,5 @@ export const StyledNavbar = styled(Navbar)`
   max-width: 750px;
   margin: auto;
   top: ${(props) => (props.$isCollapsed ? "-14%" : "0")};
+  background-color: var(--backgroundColor);
 `;
