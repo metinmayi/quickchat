@@ -1,14 +1,15 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import { List } from "react-bootstrap-icons";
 import { Logo } from "../Logo/Logo";
+import { StyledRow } from "./StyledRow";
 
 interface Props {
   setIsCollapsed: React.Dispatch<React.SetStateAction<boolean>>;
 }
 export const LogoAndHamburger: React.FC<Props> = ({ setIsCollapsed }) => {
   return (
-    <Row className="mt-4">
+    <StyledRow>
       <Col className="d-flex align-items-center justify-content-between">
         <List
           size={40}
@@ -17,6 +18,6 @@ export const LogoAndHamburger: React.FC<Props> = ({ setIsCollapsed }) => {
         />
         <Logo />
       </Col>
-    </Row>
+    </StyledRow>
   );
 };

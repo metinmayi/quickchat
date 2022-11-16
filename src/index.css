@@ -1,7 +1,7 @@
 body {
   --backgroundColor: #e6e9ea;
   --collapsedNavbarHeight: 10vh;
-  --navbarTranslate: calc(-100% + var(--defaultNavbarHeight));
+  --navbarTranslate: calc(-100% + var(--collapsedNavbarHeight));
   background-color: var(--backgroundColor);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
