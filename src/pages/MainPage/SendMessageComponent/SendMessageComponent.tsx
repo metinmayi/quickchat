@@ -21,5 +21,5 @@ export const StyledWrapper = styled.div`
   justify-content: center;
   margin-bottom: 2vh;
   margin: auto;
-  max-width: 500px;
+  max-width: 750px;
 `;

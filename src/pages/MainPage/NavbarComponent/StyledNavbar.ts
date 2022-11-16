@@ -6,7 +6,7 @@ export const StyledNavbar = styled(Navbar)`
   border: 2px solid black;
   border-radius: 10px;
   transition: top 0.5s;
-  max-width: 500px;
+  max-width: 750px;
   margin: auto;
   top: ${(props) => (props.$isCollapsed ? "-14%" : "0")};
 `;
