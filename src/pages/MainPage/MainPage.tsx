@@ -21,6 +21,4 @@ export const MainPage: React.FC = () => {
 
 export const StyledContainer = styled(Container)`
   max-width: 750px !important;
-  border-right: 1px solid black;
-  border-left: 1px solid black;
 `;
