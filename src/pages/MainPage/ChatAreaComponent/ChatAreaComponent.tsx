@@ -4,11 +4,11 @@ import avatar from "../../../assets/images/avatar.jpg";
 
 export const ChatAreaComponent: React.FC = () => {
   return (
-    <Row className="d-flex justify-content-center">
+    <StyledRow className="d-flex justify-content-center">
       <Col xs={2}>
-        <StyledAvatar>
-          <StyledImage src={avatar} />
-        </StyledAvatar>
+        {/* <StyledAvatar> */}
+        <StyledImage src={avatar} />
+        {/* </StyledAvatar> */}
       </Col>
       <Col xs={8}>
         <Row>
@@ -23,9 +23,13 @@ export const ChatAreaComponent: React.FC = () => {
           </StyledChatBubble>
         </Row>
       </Col>
-    </Row>
+    </StyledRow>
   );
 };
+
+export const StyledRow = styled(Row)`
+  margin-top: 12vh;
+`;
 
 export const StyledWrapper = styled.div`
   margin-top: 15vh;
@@ -35,7 +39,7 @@ export const StyledWrapper = styled.div`
 export const StyledAvatar = styled.div``;
 
 export const StyledImage = styled.img`
-  width: 100%;
+  height: 20%;
   border-radius: 55px;
   border: 1px solid black;
 `;
