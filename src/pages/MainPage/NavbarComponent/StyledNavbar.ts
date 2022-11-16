@@ -12,4 +12,8 @@ export const StyledNavbar = styled(Navbar)`
   );
   transition: 0.5s;
   background-color: var(--backgroundColor);
+
+  > .row {
+    padding: 2%;
+  }
 `;
