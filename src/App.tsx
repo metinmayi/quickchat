@@ -1,8 +1,7 @@
 import { MainPage } from "./pages/MainPage/MainPage";
 import io from "socket.io-client";
+export const socket = io("http://localhost:4000");
 
-const socket = io("http://localhost:4000");
-console.log(socket);
 function App() {
   return <MainPage />;
 }
