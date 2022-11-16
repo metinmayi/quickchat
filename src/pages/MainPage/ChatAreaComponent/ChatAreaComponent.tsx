@@ -46,4 +46,5 @@ export const StyledChatBubble = styled.div`
   border: 1px solid black;
   border-radius: 30px;
   padding: 3%;
+  background-color: white;
 `;
