@@ -12,7 +12,7 @@ export const ChatAreaComponent: React.FC = () => {
       </Col>
       <Col xs={8}>
         <Row>
-          <p>Metin</p>
+          <StyledParagraph>Metin</StyledParagraph>
         </Row>
         <Row>
           <StyledChatBubble>
@@ -26,6 +26,11 @@ export const ChatAreaComponent: React.FC = () => {
     </StyledRow>
   );
 };
+
+export const StyledParagraph = styled.p`
+  margin: 0;
+  font-weight: 600;
+`;
 
 export const StyledRow = styled(Row)`
   margin-top: 12vh;
@@ -41,14 +46,13 @@ export const StyledAvatar = styled.div``;
 export const StyledImage = styled.img`
   height: 20%;
   border-radius: 55px;
-  border: 1px solid black;
+  border: 1px solid gray;
 `;
 
 export const StyledNameAndMessage = styled.div``;
 
 export const StyledChatBubble = styled.div`
-  border: 1px solid black;
   border-radius: 30px;
-  padding: 3%;
+  padding: 6% 4%;
   background-color: white;
 `;
