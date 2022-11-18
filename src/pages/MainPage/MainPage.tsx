@@ -7,7 +7,7 @@ import { NavbarComponent } from "./NavbarComponent/NavbarComponent";
 import { SendMessageComponent } from "./SendMessageComponent/SendMessageComponent";
 
 interface Message {
-  username: string;
+  sender: string;
   message: string;
 }
 export const MainPage: React.FC = () => {
@@ -19,7 +19,7 @@ export const MainPage: React.FC = () => {
   useEffect(() => {
     socket.on("broadcastMessage", (socket) => {
       const newMessage = {
-        username: socket.username as string,
+        sender: socket.sender as string,
         message: socket.message as string,
       };
       setMessages([...messages, newMessage]);
@@ -38,9 +38,10 @@ export const MainPage: React.FC = () => {
       />
       {messages.map((message) => (
         <ChatAreaComponent
-          username={message.username}
+          sender={message.sender}
           message={message.message}
           key={message.message}
+          username={username}
         />
       ))}
       <SendMessageComponent username={username} chatRoom={chatRoom} />
