@@ -50,7 +50,7 @@ export const MainPage: React.FC = () => {
 
 export const StyledContainer = styled(Container)`
   max-width: 750px !important;
-  & .row:nth-child(3) {
-    margin-top: 5vh !important;
+  & > .row:nth-child(2) {
+    margin-top: 12vh;
   }
 `;
