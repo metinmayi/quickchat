@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { socket } from "../../../App";
 import { ChatRoomsMenu } from "./ChatRoomsMenu/ChatRoomsMenu";
 import { LogoAndHamburger } from "./LogoAndHamburger/LogoAndHamburger";
 import { StyledNavbar } from "./StyledNavbar";
@@ -21,6 +22,11 @@ export const NavbarComponent: React.FC<Props> = ({
   setUsername,
 }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
+
+  useEffect(() => {
+    socket.emit("joinRoom", { chatRoom });
+  }, [chatRoom]);
+
   return (
     <StyledNavbar fixed="top" className="d-block" $isCollapsed={isCollapsed}>
       <ChatRoomsMenu
