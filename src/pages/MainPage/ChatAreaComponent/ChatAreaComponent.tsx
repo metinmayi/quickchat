@@ -8,20 +8,26 @@ import { StyledParagraph } from "./StyledParagraph";
 interface Props {
   username: string;
   message: string;
+  sender: string;
 }
-export const ChatAreaComponent: React.FC<Props> = ({ username, message }) => {
+export const ChatAreaComponent: React.FC<Props> = ({
+  username,
+  message,
+  sender,
+}) => {
+  const senderIsMe = username === sender;
   return (
     <Row className="d-flex justify-content-center">
-      <Col xs={2}>
-        <StyledImage src={avatar} />
-      </Col>
       <Col xs={8}>
         <Row>
-          <StyledParagraph>{username}</StyledParagraph>
+          <StyledParagraph>{senderIsMe ? "Me" : sender}</StyledParagraph>
         </Row>
         <Row>
           <StyledChatBubble>{message}</StyledChatBubble>
         </Row>
+      </Col>
+      <Col xs={2}>
+        <StyledImage src={avatar} />
       </Col>
     </Row>
   );
