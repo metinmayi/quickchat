@@ -24,7 +24,7 @@ server.listen(4000, () => {
 function sendMessage(data) {
   this.broadcast.to(data.chatRoom).emit("broadcastMessage", {
     message: data.message,
-    username: data.username,
+    sender: data.username,
   });
 }
 
